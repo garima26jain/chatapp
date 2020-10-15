@@ -1,0 +1,141 @@
+#chat-container {
+  display: grid;
+  grid:
+    "chat-title" 78px
+    "chat-message-list" 1fr
+    "chat-form" 78px;
+  height: 500px;
+  width: 600px;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 0px;
+  right: 250px;
+}
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+/* @media (min-width: 1281px) {
+  #chat-container {
+    height: 80vh;
+    width: 581px;
+    overflow: hidden;
+    right: 10px;
+  }
+
+  #chat-title {
+    width: 1281px;
+  }
+
+  #chat-message-list {
+    width: 1281px;
+  }
+} */
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  #chat-container {
+    height: 80vh;
+    width: 500px;
+    overflow: hidden;
+    right: 5px;
+  }
+
+  #chat-title {
+    width: 500px;
+  }
+
+  #chat-message-list {
+    width: 500px;
+  }
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #chat-container {
+    height: 80vh;
+    width: 400px;
+    overflow: hidden;
+    right: 100px;
+  }
+
+  #chat-title {
+    max-width: 400px;
+  }
+
+  #chat-message-list {
+    width: 400px;
+  }
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  #chat-container {
+    height: 80vh;
+    width: 350px;
+    overflow: hidden;
+    right: 30px;
+  }
+
+  #chat-title {
+    width: 350px;
+  }
+
+  #chat-message-list {
+    width: 350px;
+  }
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  #chat-container {
+    height: 80vh;
+    width: 320px;
+    overflow: hidden;
+    right: 10px;
+  }
+
+  #chat-title {
+    width: 320px;
+  }
+
+  #chat-message-list {
+    width: 320px;
+  }
+}
+
+@media (max-width: 320px) {
+  #chat-container {
+    height: 80vh;
+    width: 200px;
+    overflow: hidden;
+    right: 10px;
+  }
+
+  #chat-title {
+    width: 200px;
+  }
+
+  #chat-message-list {
+    width: 200px;
+  }
+}

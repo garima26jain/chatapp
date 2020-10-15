@@ -1,0 +1,29 @@
+#chat-title {
+  display: grid;
+  grid: 36px / 1fr 36px;
+  align-content: center;
+  align-items: center;
+  grid-area: chat-title;
+  background: #0048aa;
+  color: #eee;
+  font-weight: bold;
+  font-size: 2rem;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.75);
+  padding: 0 20px;
+}
+
+#chat-title > img {
+  cursor: pointer;
+}
+.title-icons {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.iconStyle {
+  color: white;
+  font-size: 24px !important;
+  margin-left: 8px;
+}
