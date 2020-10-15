@@ -2,7 +2,7 @@ const initialState = {
     conversations: [
         {
             id: '1', 
-            imgUrl: require('../images/profiles/sarah.jpeg'),
+            imgUrl: require('../images/profiles/abcr.jpg'),
             imgalt: 'Sanya',
             title: 'Sanya',
             createdAt: 'Oct 13',
@@ -16,7 +16,7 @@ const initialState = {
                     isMyMessage: true
                 },
                 {
-                    imgUrl: require('../images/profiles/sarah.jpeg'),
+                    imgUrl: require('../images/profiles/abcr.jpg'),
                     imgalt: 'Sanya',
                     messageText: `
                         Not sure exactly yet. It will be next month sometime. Probably early.
@@ -32,7 +32,7 @@ const initialState = {
                     isMyMessage: true
                 },
                 {
-                    imgUrl: require('../images/profiles/sarah.jpeg'),
+                    imgUrl: require('../images/profiles/abcr.jpg'),
                     imgalt: 'Sanya',
                     messageText: `
                         lets have a fun weekend .Wouldn't it be great if you ,me all our friends could 
@@ -51,7 +51,7 @@ const initialState = {
                     isMyMessage: true
                 },
                 {
-                    imgUrl: require('../images/profiles/sarah.jpeg'),
+                    imgUrl: require('../images/profiles/abcr.jpg'),
                     imgalt: 'Sanya',
                     messageText: `
                         I've just been really busy at work myself,up for a short break or vacation?
@@ -67,7 +67,7 @@ const initialState = {
                     isMyMessage: true
                 },
                 {
-                    imgUrl: require('../images/profiles/sarah.jpeg'),
+                    imgUrl: require('../images/profiles/abcr.jpg'),
                     imgalt: 'Sanya',
                     messageText: 'Hey!!!! Have not spoken to you for a while',
                     createdAt: 'Oct 19',
@@ -90,7 +90,7 @@ initialState.selectedConversation = initialState.conversations[0];
 
 const conversationsReducer = (state = initialState, action) => {
     switch (action.type) {
-      case 'ACTIVE_CONVERSATION_CHANGED': {
+      case 'ACTIVE_CONVERSATION': {
         const newState = { ...state };
         newState.selectedConversation = 
             newState.conversations.find(
@@ -99,26 +99,7 @@ const conversationsReducer = (state = initialState, action) => {
 
         return newState;
       }
-      case 'NEW_USER_MESSAGE': {
-        if (state.selectedConversation) {
-          const newState = { ...state };
-          newState.selectedConversation = { ...newState.selectedConversation };
-          
-          newState.selectedConversation.messages.unshift(
-              {
-                  imgUrl: null,
-                  imgalt: null,
-                  messageText: action.textMessage,
-                  createdAt: 'Apr 16',
-                  isMyMessage: true
-              },
-          )
-  
-          return newState;
-        }
-
-        return state;
-    }
+     
       default:
         return state;
     }

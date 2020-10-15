@@ -11,8 +11,35 @@
   z-index: 1;
   bottom: 0px;
   right: 250px;
+  transition: 0.25s all ease-in;
 }
-
+.chat-banner {
+  position: absolute;
+  z-index: 1;
+  bottom: 0px;
+  right: 250px;
+  height: 45px;
+  width: 20vw;
+  background: rgb(14, 90, 233);
+  color: white;
+  transition: 0.25s all ease-in;
+  display: flex;
+  align-items: center;
+  box-shadow: 10px 20px 100px;
+  border-radius: 5px 5px 0px 0px;
+  border-bottom: 0;
+  cursor: pointer;
+}
+.chat-banner:hover {
+  border-radius: 20px 20px 0px 0px;
+  background: rgb(12, 73, 187);
+  transform: scale(1.05);
+}
+.banner-name {
+  font-size: 18px;
+  margin-left: 17px;
+  cursor: pointer;
+}
 /* 
   ##Device = Desktops
   ##Screen = 1281px to higher resolution desktops
